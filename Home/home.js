@@ -29,3 +29,18 @@ function toggleAnswer(element) {
         sign.textContent = '-';
     }
 }
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const country = document.getElementById('country').value;
+    const message = document.getElementById('message').value;
+    
+    console.log("Form Submitted:", { name, email, phone, country, message });
+    alert("Message Sent Successfully!");
+    
+    this.reset();
+});
